@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vibify – A Modern Music Streaming Web App</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="left-nav">
+            <img class="logo-text" src="svg/vibify-logo2.png" alt="Vibify Logo" />
+
+            <div class="home-icon">
+                <img src="svg/home.svg" alt="Home" />
+            </div>
+
+            <div class="search-container">
+                <img class="search-icon" src="svg/search.svg" alt="Search" />
+                <input type="text" placeholder="What do you want to play?" class="search-input" />
+            </div>
+        </div>
+
+        <div class="right-nav">
+            <button class="vibify-plus-btn">Get Vibify Plus</button>
+            <a href="#" class="nav-link">Discover</a>
+            <a href="#" class="nav-link">Download</a>
+            <a href="#" class="nav-link">My Tracks</a>
+            <a href="#" class="login-btn" id="login-toggle">Log In</a>
+            <a href="#" class="signup-btn">Sign Up</a>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Left Side -->
+        <aside class="left-side">
+            <div class="library-box">
+                <div class="library-header">
+                    <h2>Your Library</h2>
+                    <button class="add-playlist-btn" title="Add Playlist">＋</button>
+                </div>
+            </div>
+
+            <div class="scroll-area">
+                <div class="playlist-box">
+                    <h2>Organize your vibes</h2>
+                    <p>Create custom playlists that match your mood.</p>
+                    <button class="primary-btn">Start Playlist</button>
+                </div>
+
+                <div class="podcast-box">
+                    <h2>Explore audio journeys</h2>
+                    <p>Discover interviews, stories, and shows tailored to you.</p>
+                    <button class="primary-btn">Explore Shows</button>
+                </div>
+                <div class="preview-box">
+                    <h2>Preview of Vibify</h2>
+                    <p>Listen nonstop to music and podcasts. Free forever without interruption.</p>
+                    <button class="primary-btn">Sign up for free</button>
+                </div>
+
+
+
+            </div>
+        </aside>
+
+        <!-- Right Side -->
+        <!-- Right Side -->
+        <div class="right-side">
+            <div id="album-container" class="card-grid">
+                <!-- Album cards will be injected here by JS -->
+            </div>
+
+            <!-- ✅ Footer inside right-side -->
+            <footer class="right-footer">
+                <div class="footer-content">
+                    <p>© 2025 Vibify. All rights reserved.</p>
+                    <p>
+                        <a href="#">Privacy Policy</a> |
+                        <a href="#">Terms</a> |
+                        <a href="#">Support</a>
+                    </p>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+    <!-- Audio Element (hidden) -->
+    <audio id="audio-player"></audio>
+
+    <!-- Music Controls -->
+    <div class="music-controls-wrapper hidden" id="music-controls-wrapper">
+        <div class="music-controls">
+            <div class="main-controls">
+                <span id="current-song-name"></span>
+
+                <button id="prev-btn">
+                    <img src="svg/prevsong.svg" alt="Previous" class="control-icon" />
+                </button>
+                <button id="play-pause-btn">
+                    <img src="svg/play.svg" alt="Play" id="play-icon" class="control-icon" />
+                </button>
+                <button id="next-btn">
+                    <img src="svg/nextsong.svg" alt="Next" class="control-icon" />
+                </button>
+            </div>
+
+            <div class="extras">
+                <div class="progress-container">
+                    <span id="current-time">0:00</span>
+                    <input type="range" id="progress-bar" value="0" />
+                    <span id="duration">0:00</span>
+                </div>
+
+                <div class="volume-container">
+                    <button id="mute-btn">
+                        <img src="svg/volume.svg" alt="Mute" id="volume-icon" class="control-icon" />
+                    </button>
+                    <input type="range" id="volume-bar" min="0" max="1" step="0.01" value="1" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
